@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='studentstyles.css') }}">
+    <title>QUIZ</title>
+</head>
+<body>
+    <div class="container">
+        <form action="{{ url_for('view_quiz', quiz_id=request.view_args['quiz_id']) }}" method="post">
+            <label for="Reg_no">Enter Your Registration Number</label>
+            <input type="text" id="Reg_no" name="Reg_No" required>
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+    {% if res %}
+    <table>
+        <thead>
+            <tr>
+                <th>Question(s)</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for i in res %}
+            <tr>
+                <td>{{ i }} </td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table> 
+    {% endif %}
+</body>
+</html>

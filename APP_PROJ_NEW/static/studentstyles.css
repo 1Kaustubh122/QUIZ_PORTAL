@@ -1,0 +1,63 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #e6e6fa; /* Light gray background */
+    margin: 0;
+    padding: 0;
+  }
+  
+  .container {
+    width: 80%; /* Wider container for more space */
+    max-width: 600px; /* Maximum width for better readability */
+    margin: 40px auto; /* Centered with top and bottom margin */
+    background-color: #ffffff; /* White background for the container */
+    padding: 20px; /* Padding for inner spacing */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Soft shadow for floating effect */
+  }
+  
+  .quiz-title {
+    text-align: center;
+    color: #333; /* Darker text color for better contrast */
+    margin-bottom: 20px; /* Space below the title */
+  }
+  
+  .question-container {
+    margin-bottom: 20px; /* Space below the question container */
+  }
+  
+  .question {
+    font-size: 18px; /* Slightly larger font size for the question */
+    color: #555; /* Medium gray color for the question text */
+  }
+  
+  .answer-form {
+    display: flex;
+    flex-direction: column; /* Vertical alignment of form elements */
+  }
+  
+  .answer-form label {
+    margin-bottom: 10px; /* Space below the label */
+    color: #333; /* Darker text color for the label */
+  }
+  
+  .answer-form input[type="text"] {
+    padding: 10px; /* Padding inside the text input */
+    border: 1px solid #ccc; /* Light gray border */
+    border-radius: 4px; /* Rounded corners for the input */
+    margin-bottom: 20px; /* Space below the input */
+  }
+  
+  .answer-form button {
+    padding: 10px 20px; /* Padding inside the button */
+    background-color: #28a745; /* Green background for the button */
+    color: #fff; /* White text color */
+    border: none; /* Remove border */
+    border-radius: 4px; /* Rounded corners for the button */
+    cursor: pointer; /* Pointer cursor on hover */
+    font-size: 16px; /* Font size for better readability */
+  }
+  
+  .answer-form button:hover {
+    background-color: #218838; /* Darker green on hover */
+  }
+  

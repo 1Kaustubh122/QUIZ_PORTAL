@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shuffled Questions</title>
+    <style>
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        table, th, td {
+            border: 1px solid black;
+        }
+        th, td {
+            padding: 10px;
+            text-align: left;
+        }
+    </style>
+</head>
+<body>
+    <h1>Shuffled Questions for Students</h1>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Student Reg. No</th>
+                <th>Question</th>
+            </tr>
+        </thead>
+        <tbody>
+            {{ quizs_link }}
+            {% for key, values in shuffled_questions.items()%}
+            <tr>
+                <td>{{ key }} </td>
+                {% for i in values %}
+                <td>{{ i }}</td>
+                {% endfor %}
+               
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</body>
+</html>

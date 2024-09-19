@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Quiz</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Create a Quiz</h1>
+        <form action="/create_quiz" method="POST" enctype="multipart/form-data">
+            <label for="quiz_title">Quiz Title:</label>
+            <input type="text" id="quiz_title" name="title" required>
+
+            <label for="subject_name">Subject Name:</label>
+            <input type="text" id="subject_name" name="subject" required>
+
+            <label for="start_reg_number">Starting Registration Number:</label>
+            <input type="text" id="start_reg_number" name="start_reg_number" required>
+
+            <label for="end_reg_number">Ending Registration Number:</label>
+            <input type="text" id="end_reg_number" name="end_reg_number" required>
+            
+            <label for="num_questions">Number of Questions per Student:</label>
+            <input type="number" id="num_questions" name="num_questions" required>
+
+            <label for="file_upload">Upload a File:</label>
+            <input type="file" id="file_upload" name="file_upload">
+
+            <button type="submit">Create Quiz</button>
+        </form>
+    </div>
+</body>
+</html>
